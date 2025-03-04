@@ -2,6 +2,7 @@
   "name": "post-app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -9,19 +10,41 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.476.0",
+    "next": "15.2.0-canary.74",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.2.0-canary.74"
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4.0.8",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
-    "eslint": "^9",
-    "eslint-config-next": "15.2.0-canary.74",
-    "@eslint/eslintrc": "^3"
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
+    "eslint": "^9.21.0",
+    "eslint-config-next": "^15.1.7",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-import-resolver-typescript": "^3.8.3",
+    "eslint-plugin-check-file": "^3.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jest-dom": "^5.5.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-tailwindcss": "^3.18.0",
+    "eslint-plugin-testing-library": "^7.1.1",
+    "eslint-plugin-vitest": "^0.5.4",
+    "prettier": "^3.5.2",
+    "storybook": "^8.6.0",
+    "tailwindcss": "^4.0.8",
+    "typescript": "^5"
   }
 }
