@@ -9,6 +9,15 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@utility container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @variant sm {
+        max-width: 1500px;
+      }
+  }
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

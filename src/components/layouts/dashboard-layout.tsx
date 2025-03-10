@@ -1,6 +1,9 @@
 'use client';
 
-import { AppSidebar } from '@/components/ui/sidebar/app-sidebar';
+import { usePathname } from 'next/navigation';
+import { ReactNode } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -15,10 +18,9 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from '@/components/ui/sidebar';
-import { usePathname } from 'next/navigation';
-import { ErrorBoundary } from 'react-error-boundary';
+import { AppSidebar } from '@/components/ui/sidebar/app-sidebar';
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <SidebarProvider>
       <AppSidebar />
@@ -52,11 +54,7 @@ function Fallback({ error }: { error: Error }) {
   return <p>Error: {error.message ?? 'Something went wrong!'}</p>;
 }
 
-export const DashboardLayout = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
+export const DashboardLayout = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
   return (
     <Layout>
