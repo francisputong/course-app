@@ -4,7 +4,7 @@ import React, { Suspense } from 'react';
 
 import { AppProvider } from './provider';
 
-import '../styles/globals.css';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
