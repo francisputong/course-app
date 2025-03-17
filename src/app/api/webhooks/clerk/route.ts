@@ -6,6 +6,13 @@ import { env } from '@/data/env/server';
 import { deleteUser, insertUser, updateUser } from '@/features/users/db/users';
 import { syncClerkUserMetadata } from '@/services/clerk';
 
+export async function GET() {
+  return new Response('Hello, world!', {
+    status: 200,
+    headers: { 'Content-Type': 'text/plain' },
+  });
+}
+
 export async function POST(req: Request) {
   const headerPayload = await headers();
   const svixId = headerPayload.get('svix-id');
