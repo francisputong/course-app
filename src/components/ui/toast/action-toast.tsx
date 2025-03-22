@@ -12,7 +12,7 @@ interface ActionToastProps extends Omit<ExternalToast, 'description' | 'type'> {
 function actionToast({ actionData, ...props }: ActionToastProps) {
   if (actionData.error) {
     toast.error('Error', {
-      description: actionData.error,
+      description: actionData.message,
       ...props,
     });
   } else {

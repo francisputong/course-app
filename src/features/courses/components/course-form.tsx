@@ -20,7 +20,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { RequiredLabelIcon } from '@/components/ui/required-label-icon';
 import { Textarea } from '@/components/ui/textarea';
-import { actionToast } from '@/components/ui/toast/action-toast';
+import { actionToast } from '@/components/ui/toast';
 
 export function CourseForm({
   course,

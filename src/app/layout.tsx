@@ -4,6 +4,7 @@ import React, { Suspense } from 'react';
 
 import { AppProvider } from './provider';
 
+import { Toaster } from '@/components/ui/toast';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -22,6 +23,7 @@ export default function RootLayout({
         <html lang="en">
           <body className="antialiased">
             <AppProvider>{children}</AppProvider>
+            <Toaster richColors />
           </body>
         </html>
       </ClerkProvider>

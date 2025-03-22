@@ -22,7 +22,7 @@ function Navbar() {
     <header className="flex h-12 shadow bg-background z-10">
       <nav className="flex gap-4 container">
         <Link
-          className="mr-auto text-lg hover:underline px-2 flex items-center"
+          className="mr-auto text-lg hover:underline flex items-center"
           href="/"
         >
           Course App Demo
@@ -66,9 +66,7 @@ function Navbar() {
 }
 
 async function AdminLink() {
-  const user = await getCurrentUser({ allData: true });
-
-  console.log(user.user?.name);
+  const user = await getCurrentUser();
 
   if (!canAccessAdminPages(user)) return null;
 
