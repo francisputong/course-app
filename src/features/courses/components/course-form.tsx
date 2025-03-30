@@ -4,10 +4,10 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-// import { createCourse, updateCourse } from '../actions/courses';
-import { createCourse } from '../actions/courses';
+import { createCourse, updateCourse } from '../actions/courses';
 import { courseSchema } from '../schemas/courses';
 
+import { RequiredLabelIcon } from '@/components/required-label-icon';
 import { Button } from '@/components/ui/button';
 import {
   Form,
@@ -18,7 +18,6 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { RequiredLabelIcon } from '@/components/ui/required-label-icon';
 import { Textarea } from '@/components/ui/textarea';
 import { actionToast } from '@/components/ui/toast';
 
@@ -40,10 +39,9 @@ export function CourseForm({
   });
 
   async function onSubmit(values: z.infer<typeof courseSchema>) {
-    const data = await createCourse(values);
-    // const action =
-    //   course == null ? createCourse : updateCourse.bind(null, course.id);
-    // const data = await action(values);
+    const action =
+      course == null ? createCourse : updateCourse.bind(null, course.id);
+    const data = await action(values);
     actionToast({ actionData: data });
   }
 

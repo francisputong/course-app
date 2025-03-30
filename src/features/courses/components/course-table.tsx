@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { deleteCourse } from '../actions/courses';
 
-import { ActionButton } from '@/components/ui/action-button';
+import { ActionButton } from '@/components/action-button';
 import { Button } from '@/components/ui/button';
 import {
   Table,

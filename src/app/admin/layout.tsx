@@ -26,19 +26,19 @@ function Navbar() {
           <Badge>Admin</Badge>
         </div>
         <Link
-          className="hover:bg-purple-200 flex items-center px-2"
+          className="hover:bg-accent/10 flex items-center px-2"
           href="/admin/courses"
         >
           Courses
         </Link>
         <Link
-          className="hover:bg-purple-200 flex items-center px-2"
+          className="hover:bg-accent/10 flex items-center px-2"
           href="/admin/products"
         >
           Products
         </Link>
         <Link
-          className="hover:bg-purple-200 flex items-center px-2"
+          className="hover:bg-accent/10 flex items-center px-2"
           href="/admin/sales"
         >
           Sales

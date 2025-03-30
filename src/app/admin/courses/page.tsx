@@ -2,8 +2,8 @@ import { asc, countDistinct, eq } from 'drizzle-orm';
 import { cacheTag } from 'next/dist/server/use-cache/cache-tag';
 import Link from 'next/link';
 
+import { PageHeader } from '@/components/page-header';
 import { Button } from '@/components/ui/button';
-import { PageHeader } from '@/components/ui/page-header';
 import db from '@/drizzle/db';
 import {
   CourseSectionTable,
@@ -11,11 +11,11 @@ import {
   LessonTable,
   UserCourseAccessTable,
 } from '@/drizzle/schema';
+import { getCourseSectionGlobalTag } from '@/features/course-sections/db/cache';
 import { CourseTable } from '@/features/courses/components/course-table';
 import { getCourseGlobalTag } from '@/features/courses/db/cache/courses';
-// import { getUserCourseAccessGlobalTag } from '@/features/courses/db/cache/userCourseAccess';
-// import { getCourseSectionGlobalTag } from '@/features/courseSections/db/cache';
-// import { getLessonGlobalTag } from '@/features/lessons/db/cache/lessons';
+import { getUserCourseAccessGlobalTag } from '@/features/courses/db/cache/user-course-access';
+import { getLessonGlobalTag } from '@/features/lessons/db/cache/lessons';
 
 export default async function CoursesPage() {
   const courses = await getCourses();
@@ -37,9 +37,9 @@ async function getCourses() {
   'use cache';
   cacheTag(
     getCourseGlobalTag(),
-    // getUserCourseAccessGlobalTag(),
-    // getCourseSectionGlobalTag(),
-    // getLessonGlobalTag(),
+    getUserCourseAccessGlobalTag(),
+    getCourseSectionGlobalTag(),
+    getLessonGlobalTag(),
   );
 
   return db

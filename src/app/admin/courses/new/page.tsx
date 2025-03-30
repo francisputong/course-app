@@ -1,4 +1,4 @@
-import { PageHeader } from '@/components/ui/page-header';
+import { PageHeader } from '@/components/page-header';
 import { CourseForm } from '@/features/courses/components/course-form';
 
 export default function NewCoursePage() {

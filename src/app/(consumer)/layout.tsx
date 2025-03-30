@@ -31,13 +31,13 @@ function Navbar() {
           <SignedIn>
             <AdminLink />
             <Link
-              className="hover:bg-purple-200 flex items-center px-2"
+              className="hover:bg-accent/10 flex items-center px-2"
               href="/courses"
             >
               My Courses
             </Link>
             <Link
-              className="hover:bg-purple-200 flex items-center px-2"
+              className="hover:bg-accent/10 flex items-center px-2"
               href="/purchases"
             >
               Purchase History
@@ -71,7 +71,7 @@ async function AdminLink() {
   if (!canAccessAdminPages(user)) return null;
 
   return (
-    <Link className="hover:bg-purple-200 flex items-center px-2" href="/admin">
+    <Link className="hover:bg-accent/10 flex items-center px-2" href="/admin">
       Admin
     </Link>
   );

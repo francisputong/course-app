@@ -13,8 +13,8 @@ import {
   AlertDialogFooter,
   AlertDialogCancel,
   AlertDialogAction,
-} from '../alert-dialog';
-import { Button } from '../button';
+} from '../ui/alert-dialog';
+import { Button } from '../ui/button';
 
 import { actionToast } from '@/components/ui/toast';
 import { cn } from '@/lib/utils';
